@@ -8,6 +8,6 @@ describe 'updating' do
   end
 
   it 'updates the species of the last character in the characters table' do 
-    expect(@db.execute("your query here").flatten[0]).to eq("your new species here")
+    expect(@db.execute("SELECT species FROM characters WHERE id = 8").flatten[0]).to eq("Unicorn")
   end
 end
